@@ -1,0 +1,350 @@
+/* Responsive Design for Farmer Marketplace */
+
+/* Tablet Styles - 768px and below */
+@media (max-width: 768px) {
+    /* Header */
+    .nav-menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: white;
+        flex-direction: column;
+        padding: 20px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        border-radius: 0 0 10px 10px;
+    }
+    
+    .nav-menu.active {
+        display: flex;
+    }
+    
+    .nav-menu li {
+        margin: 10px 0;
+    }
+    
+    .hamburger {
+        display: flex;
+    }
+    
+    .auth-buttons {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 20px;
+    }
+    
+    /* Hero Section */
+    .hero {
+        padding: 100px 0 60px;
+        min-height: 80vh;
+    }
+    
+    .hero-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        text-align: center;
+    }
+    
+    .hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .hero-stats {
+        justify-content: center;
+        gap: 20px;
+    }
+    
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+    
+    .floating-card {
+        position: static;
+        margin: 20px auto;
+        width: 100%;
+        max-width: 300px;
+    }
+    
+    /* Problem Solution */
+    .comparison {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .chain {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .arrow {
+        rotate: 90deg;
+    }
+    
+    /* Features */
+    .features-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    /* Testimonials */
+    .testimonials-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    /* CTA Section */
+    .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    /* Footer */
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        text-align: center;
+    }
+}
+
+/* Mobile Styles - 480px and below */
+@media (max-width: 480px) {
+    .container {
+        padding: 0 15px;
+    }
+    
+    /* Typography */
+    .hero-title {
+        font-size: 2rem;
+    }
+    
+    .section-header h2 {
+        font-size: 2rem;
+    }
+    
+    .cta-content h2 {
+        font-size: 2rem;
+    }
+    
+    /* Hero Section */
+    .hero {
+        padding: 80px 0 40px;
+    }
+    
+    .hero-description {
+        font-size: 1rem;
+    }
+    
+    .hero-stats {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .stat .number {
+        font-size: 1.5rem;
+    }
+    
+    /* Buttons */
+    .btn-large {
+        padding: 14px 28px;
+        font-size: 16px;
+    }
+    
+    /* Cards */
+    .feature-card,
+    .testimonial-card {
+        margin: 0 10px;
+    }
+    
+    .traditional-way,
+    .our-way {
+        padding: 25px 20px;
+    }
+    
+    /* Chain items */
+    .chain-item {
+        min-width: 60px;
+    }
+    
+    .chain-item i {
+        font-size: 1.5rem;
+    }
+    
+    .chain-item span {
+        font-size: 14px;
+    }
+    
+    .chain-item small {
+        font-size: 11px;
+    }
+    
+    /* Testimonials */
+    .testimonial-content {
+        padding: 25px 20px;
+    }
+    
+    .testimonial-author img {
+        width: 50px;
+        height: 50px;
+    }
+    
+    /* Footer */
+    .footer {
+        padding: 40px 0 20px;
+    }
+    
+    .social-links {
+        justify-content: center;
+    }
+}
+
+/* Large Desktop - 1400px and above */
+@media (min-width: 1400px) {
+    .container {
+        max-width: 1400px;
+    }
+    
+    .hero-title {
+        font-size: 4rem;
+    }
+    
+    .section-header h2 {
+        font-size: 3rem;
+    }
+}
+
+/* High DPI/Retina Display Support */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .logo,
+    .farmer-image {
+        image-rendering: -webkit-optimize-contrast;
+        image-rendering: crisp-edges;
+    }
+}
+
+/* Print Styles */
+@media print {
+    .header,
+    .hamburger,
+    .auth-buttons,
+    .hero-buttons,
+    .cta-section,
+    .footer {
+        display: none;
+    }
+    
+    .hero {
+        background: white;
+        color: black;
+        padding: 20px 0;
+    }
+    
+    .hero-title {
+        color: black;
+    }
+    
+    .highlight {
+        color: black;
+        background: none;
+        -webkit-text-fill-color: initial;
+    }
+}
+
+/* Landscape orientation for mobile */
+@media (max-width: 768px) and (orientation: landscape) {
+    .hero {
+        min-height: 60vh;
+        padding: 60px 0 40px;
+    }
+    
+    .hero-stats {
+        flex-direction: row;
+        gap: 20px;
+    }
+}
+
+/* Accessibility - Reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+    
+    .floating-card {
+        animation: none;
+    }
+    
+    html {
+        scroll-behavior: auto;
+    }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #1a1a1a;
+        color: #e0e0e0;
+    }
+    
+    .header {
+        background: rgba(26, 26, 26, 0.95);
+    }
+    
+    .nav-brand,
+    .nav-menu li a {
+        color: #e0e0e0;
+    }
+    
+    .feature-card,
+    .testimonial-card,
+    .traditional-way,
+    .our-way,
+    .floating-card {
+        background: #2d2d2d;
+        color: #e0e0e0;
+    }
+    
+    .section-header h2 {
+        color: #4db6ac;
+    }
+    
+    .feature-card h3,
+    .author-info h4 {
+        color: #e0e0e0;
+    }
+    
+    .price-item .label,
+    .improvement .text {
+        color: #b0b0b0;
+    }
+}
+
+/* Focus styles for accessibility */
+.btn:focus,
+.nav-menu li a:focus,
+button:focus,
+input:focus,
+select:focus {
+    outline: 2px solid #2a9d8f;
+    outline-offset: 2px;
+}
+
+/* Skip to content link for screen readers */
+.skip-to-content {
+    position: absolute;
+    top: -40px;
+    left: 6px;
+    background: #2a9d8f;
+    color: white;
+    padding: 8px;
+    text-decoration: none;
+    border-radius: 4px;
+    z-index: 10000;
+}
+
+.skip-to-content:focus {
+    top: 6px;
+}
